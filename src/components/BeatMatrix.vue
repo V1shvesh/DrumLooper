@@ -29,7 +29,8 @@ export default {
   name: 'BeatMatrix',
   data() {
     return {
-      beatMatrix: Array(noOfInstruments).fill(Array(noOfBeats).fill(false)),
+      beatMatrix: Array(noOfInstruments).fill(false)
+        .map(() => new Array(noOfBeats).fill(false)),
       toneInstance: null,
     };
   },
